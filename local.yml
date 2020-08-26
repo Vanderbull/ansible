@@ -1,4 +1,5 @@
 - hosts: localhost
   become: true
   tasks:
-  - name: ['htop', 'mc', 'tmux']
+  - name Install applications
+      apt: ['htop', 'mc', 'tmux']
