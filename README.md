@@ -10,3 +10,7 @@ https://kbroman.org/github_tutorial/pages/first_time.html
 git clone https://github.com/bjonke/ansible.git
 
 The default location for inventory is a file called /etc/ansible/hosts
+
+#Trailing , important for workaround to work
+sudo ansible-pull -i dumbo, -U https://github.com/bjonke/ansible.git
+
