@@ -14,3 +14,5 @@ The default location for inventory is a file called /etc/ansible/hosts
 #Trailing , important for workaround to work
 sudo ansible-pull -i dumbo, -U https://github.com/bjonke/ansible.git
 
+https://medium.com/@perwagnernielsen/ansible-tutorial-part-2-installing-packages-41d3ab28337d
+
