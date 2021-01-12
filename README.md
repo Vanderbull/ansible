@@ -16,3 +16,21 @@ sudo ansible-pull -i dumbo, -U https://github.com/bjonke/ansible.git
 
 https://medium.com/@perwagnernielsen/ansible-tutorial-part-2-installing-packages-41d3ab28337d
 
+ansible localhost -m ping
+
+ansible-playbook --connection=local --inventory 127.0.0.1, gnome-todo.yml -i hosts
+
+Show a history of recently installed packages, their version number, and the date / time they were installed on Debian, Ubuntu or Linux Mint:
+
+grep "install " /var/log/dpkg.log
+
+Show a history of recently removed packages and the date / time they were removed, on Debian, Ubuntu or Linux Mint:
+
+grep "remove " /var/log/dpkg.log
+
+
+apt list --installed
+
+apt -qq list program_name --installed
+
+update-desktop-database

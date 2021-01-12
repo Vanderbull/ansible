@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: remove package
+      become: true
+      become_user: root
+      action: >
+       {{ ansible_pkg_mgr }} name=gnome-todo,htop,transmission state=present update_cache=yes
+    - name: uninstall gnome-todo
+      apt:
+        name: gnome-todo
+    - command: apt -y autoremove gnome-todo

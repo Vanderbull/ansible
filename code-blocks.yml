@@ -1,0 +1,38 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: install packages
+      become: true
+      become_user: root
+      action: >
+       {{ ansible_pkg_mgr }} name=htop,transmission state=present update_cache=yes
+    - name: install code blocks
+      get_url:
+        url: https://zoom.us/client/latest/zoom_amd64.deb
+        dest: /tmp/zoom_amd64.deb
+    - name: install libegl1-mesa
+      apt:
+        name: libegl1-mesa
+    - name: install libxcb-xtest0
+      apt:
+        name: libxcb-xtest0
+    - command: dpkg -i /tmp/zoom_amd64.deb
+    - command: apt -f install
+    - command: apt -y autoremove zoom
+    - name: Install list of packages
+      apt:
+        pkg:
+        - libegl1-mesa
+        - libxcb-xtest0
+    - name: Install a .deb package from the internet
+      apt:
+        deb: https://zoom.us/client/latest/zoom_amd64.deb
+    - name: Copy wallpaper file
+      copy: 
+        src: Pictures/amra-logo-rgb.png
+        dest: /usr/share/backgrounds/amra-logo-rgb.png
+        owner: rickard
+        group: rickard
+        mode: 600
+        
