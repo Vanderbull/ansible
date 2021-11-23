@@ -1,3 +1,6 @@
+# Installation of steam
+sudo apt install steam
+
 # Get support for exFAT instead of FAT
 sudo apt-get install exfat-fuse exfat-utils
 
