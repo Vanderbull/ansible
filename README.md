@@ -1,3 +1,6 @@
+# Installation of Discord
+sudo apt install discord
+
 # Installation of steam
 sudo apt install steam
 
