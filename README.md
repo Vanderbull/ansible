@@ -1,3 +1,6 @@
+# Get support for exFAT instead of FAT
+sudo apt-get install exfat-fuse exfat-utils
+
 # ansible
 Ansible lab
 
