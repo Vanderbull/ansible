@@ -1,3 +1,6 @@
+# install blender
+sudo snap install blender
+
 # Download and install picoCAD
 https://johanpeitz.itch.io/picocad
 
