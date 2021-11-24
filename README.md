@@ -1,3 +1,6 @@
+# Download and install picoCAD
+https://johanpeitz.itch.io/picocad
+
 # Installation of Discord
 sudo apt install discord
 
