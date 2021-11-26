@@ -1,3 +1,6 @@
+# install gitfiend
+- https://gitfiend.com/
+
 # install codeblocks
 - sudo apt install codeblocks
 - sudo apt install codeblocks-contrib
