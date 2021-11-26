@@ -1,3 +1,7 @@
+#install codeblocks
+sudo apt install codeblocks
+sudo apt install codeblocks-contrib
+
 # install blender
 sudo snap install blender
 
