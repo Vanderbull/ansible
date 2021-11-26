@@ -1,4 +1,4 @@
-#install codeblocks
+# install codeblocks
 sudo apt install codeblocks
 sudo apt install codeblocks-contrib
 
