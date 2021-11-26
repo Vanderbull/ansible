@@ -1,3 +1,6 @@
+# install git
+sudo apt install git
+
 # install gitfiend
 - https://gitfiend.com/
 
