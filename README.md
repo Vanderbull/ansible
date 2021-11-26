@@ -1,5 +1,5 @@
 # install codeblocks
-- udo apt install codeblocks
+- sudo apt install codeblocks
 - sudo apt install codeblocks-contrib
 
 # install blender
