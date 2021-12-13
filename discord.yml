@@ -1,0 +1,7 @@
+- hosts: localhost
+  tasks:
+    # sending a message
+    - name: Send Hello World! to the webhook
+      discord_webhook:
+        webhook_url: https://discordapp.com/api/webhooks/919134917345050624/u3JbJxUf8y0UuBB1guVDzFFEDQa6fj6lfPGoniDonWVHFxOrVRXLpUMpyJY5dqLc2Q6L
+        content: Hello, world!

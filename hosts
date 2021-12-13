@@ -1,5 +1,11 @@
-[localhost]
-127.0.0.1
+#[localhost]
+#127.0.0.1
 
-[localhost:vars]
+[group1]
+gigabyte.local
+orange.local
+dell.local
+hp.local
+
+#[localhost:vars]
 #ansible_connection=local

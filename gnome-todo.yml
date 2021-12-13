@@ -1,13 +1,57 @@
----
-- hosts: all
+- hosts: localhost
   become: true
   tasks:
-    - name: remove package
-      become: true
-      become_user: root
-      action: >
-       {{ ansible_pkg_mgr }} name=gnome-todo,htop,transmission state=present update_cache=yes
-    - name: uninstall gnome-todo
-      apt:
-        name: gnome-todo
-    - command: apt -y autoremove gnome-todo
+#    - name: Update and upgrade apt packages
+#      become: true
+#      apt:
+#        update_cache: yes
+#        upgrade: 'yes'
+    
+#    - name: Upgrade the OS (apt-get dist-upgrade)
+#      apt:
+#        upgrade: dist
+  
+#    - name: Add gimp stable repository from PPA and install its signing key on Ubuntu target
+#      ansible.builtin.apt_repository:
+#        repo: ppa:otto-kesselgulasch/gimp
+#    - name: Update repositories cache and install "gimp" package
+#      apt:
+#        name: gimp
+#        update_cache: yes
+#        state: present
+#    - name: remove package
+#      become: true
+#      become_user: root
+#      action: >
+#       {{ ansible_pkg_mgr }} name=gnome-todo,htop,transmission-gtk state=present update_cache=yes
+#    - name: uninstall gnome-todo
+#      apt:
+#        name: gnome-todo
+#    - command: apt -y autoremove gnome-todo
+#    - name: uninstall htop
+#      apt:
+#        name: htop
+#    - command: apt -y autoremove htop
+#    - name: uninstall transmission-gtk
+#      apt:
+#        name: transmission-gtk
+#    - command: apt -y autoremove transmission-gtk
+#    - name: uninstall midnigh commander
+#      apt:
+#        name: mc
+#    - command: apt -y autoremove mc
+#    - name: install desktop background
+#      get_url:
+#        url: https://wallpapercave.com/download/free-winter-background-wallpaper-Wkypjja
+#        dest: /tmp/free-winter-background-wallpaper-Wkypjja
+#    - command: gsettings set org.gnome.desktop.background picture-uri file:////tmp/free-winter-background-wallpaper-Wkypjja
+#    - name: MORE
+#      gsetting:
+#        settings:
+#          org.gnome.desktop.background picture-uri: file:////tmp/free-winter-background-wallpaper-Wkypjja
+          
+    - name: Create git archive from repo
+      ansible.builtin.git:
+        repo: https://github.com/ansible/ansible-examples.git
+        dest: /src/ansible-examples
+        archive: /tmp/ansible-examples.zip

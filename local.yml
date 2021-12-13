@@ -1,10 +1,12 @@
-- hosts: localhost
-  become: true
-  tasks:
-  - name: Install packages
-    apt: 
-      pkg:
-        - htop
-        - mc
-        - tmux
-      state: present
+#- hosts: localhost
+#  become: true
+#  tasks:
+#  - name: Install packages
+#    apt: 
+#      pkg:
+#        - htop
+#        - tmux
+#      state: present
+#  - name: Add gimp stable repository from PPA and install its signing key on Ubuntu target
+#    ansible.builtin.apt_repository:
+#      repo: ppa:otto-kesselgulasch/gimp

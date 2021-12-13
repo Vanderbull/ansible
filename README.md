@@ -1,3 +1,5 @@
+https://docs.ansible.com/ansible/latest/collections/community/general/discord_module.html
+
 # Installation of steam
 sudo apt install steam
 
@@ -18,7 +20,10 @@ git clone https://github.com/bjonke/ansible.git
 The default location for inventory is a file called /etc/ansible/hosts
 
 #Trailing , important for workaround to work
-sudo ansible-pull -i dumbo, -U https://github.com/bjonke/ansible.git
+sudo ansible-pull -i hp, -U https://github.com/bjonke/ansible.git
+
+username:
+password: <token>
 
 https://medium.com/@perwagnernielsen/ansible-tutorial-part-2-installing-packages-41d3ab28337d
 
