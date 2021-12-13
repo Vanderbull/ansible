@@ -1,4 +1,22 @@
 https://docs.ansible.com/ansible/latest/collections/community/general/discord_module.html
+# install git
+sudo apt install git
+
+# install gitfiend
+- https://gitfiend.com/
+
+# install codeblocks
+- sudo apt install codeblocks
+- sudo apt install codeblocks-contrib
+
+# install blender
+sudo snap install blender
+
+# Download and install picoCAD
+https://johanpeitz.itch.io/picocad
+
+# Installation of Discord
+sudo apt install discord
 
 # Installation of steam
 sudo apt install steam
