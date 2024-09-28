@@ -5,6 +5,7 @@
 
   tasks:
   - name: add user and enable sudo
+  
   - name: configure network
   - name: cpnfigure timeezone and ntp
   - name: disable cd and dvd repos
