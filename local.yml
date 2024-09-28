@@ -12,32 +12,32 @@
     debug:
       msg: Hello Ansible World
   - name: cpnfigure timeezone and ntp
-      debug:
-        msg: Hello Ansible World
+    debug:
+      msg: Hello Ansible World
   - name: disable cd and dvd repos
-      debug:
-        msg: Hello Ansible World
+    debug:
+      msg: Hello Ansible World
   - name: update system
-      debug:
-        msg: Hello Ansible World
+    debug:
+      msg: Hello Ansible World
   - name: configure ssh
-      debug:
-        msg: Hello Ansible World
+    debug:
+      msg: Hello Ansible World
   - name: firewall settings
-      debug:
-        msg: Hello Ansible World
+    debug:
+      msg: Hello Ansible World
   - name: customize desktop
-      debug:
-        msg: Hello Ansible World
+    debug:
+      msg: Hello Ansible World
   - name: enable gnome shell extensions
-      debug:
-        msg: Hello Ansible World
+    debug:
+      msg: Hello Ansible World
   - name: remove snapd if installed
-      debug:
-        msg: Hello Ansible World
+    debug:
+      msg: Hello Ansible World
   - name: install chrome
-      debug:
-        msg: Hello Ansible World
+    debug:
+      msg: Hello Ansible World
   
   - name: install packages
     package:
