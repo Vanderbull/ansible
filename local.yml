@@ -5,7 +5,9 @@
 
   tasks:
   - name: add user and enable sudo
-  
+    ansible.builtin.apt:
+      name: httpd
+      state: latest
   - name: configure network
   - name: cpnfigure timeezone and ntp
   - name: disable cd and dvd repos
