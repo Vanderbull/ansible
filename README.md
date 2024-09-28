@@ -1,4 +1,5 @@
 [WARNING]: Could not match supplied host pattern, ignoring: dell
+
 ansible-pull -i dell -o -U https://github.com/Vanderbull/ansible.git
 
 
