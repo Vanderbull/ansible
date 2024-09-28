@@ -48,6 +48,12 @@
         - htop
         - tmux
         - vim-nox
+  - name: uninstall htop
+    ansible.builtin.package:
+      name: "htop"
+      state: absent
+    
+  
 #  - name: copy wallpaper file
 #    copy:
 #      src: files/wallpaper.png
