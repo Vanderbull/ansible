@@ -4,6 +4,12 @@
   become: true
 
   tasks:
+    - name: remove cached deb files
+    debug:
+      msg: cd /var/cache/apt/archives
+  - name: install flatpak
+    debug:
+      msg: disable disabled
   - name: disable sudo for ansible user
     debug:
       msg: disable disabled
@@ -49,7 +55,7 @@
         - vim-nox
   - name: uninstall htop
     ansible.builtin.package:
-      name: "htop"
+      name: "gnome-games"
       state: absent
     
   
