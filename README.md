@@ -1,4 +1,4 @@
-
+1874
 
 steps straight from minimal debian, you can edit it as you like especially on the gnome part
 after debian minimal installation as root
