@@ -9,8 +9,8 @@
       name: httpd
       state: latest
   - name: configure network
-      debug:
-        msg: Hello Ansible World
+    debug:
+      msg: Hello Ansible World
   - name: cpnfigure timeezone and ntp
       debug:
         msg: Hello Ansible World
