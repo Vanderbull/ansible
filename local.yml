@@ -4,13 +4,24 @@
   become: true
 
   tasks:
+  - name: add user and enable sudo
+  - name: configure network
+  - name: cpnfigure timeezone and ntp
+  - name: disable cd and dvd repos
+  - name: update system
+  - name: configure ssh
+  - name: firewall settings
+  - name: customize desktop
+  - name: enable gnome shell extensions
+  - name: remove snapd if installed
+  - name: install chrome
+  
   - name: install packages
     package:
       name:
         - htop
         - tmux
         - vim-nox
-
 #  - name: copy wallpaper file
 #    copy:
 #      src: files/wallpaper.png
