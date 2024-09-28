@@ -8,9 +8,8 @@
     debug:
       msg: disable disabled
   - name: add user and enable sudo
-    ansible.builtin.apt:
-      name: httpd
-      state: latest
+    debug:
+      msg: disable disabled
   - name: configure network
     debug:
       msg: Hello Ansible World
