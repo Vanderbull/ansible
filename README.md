@@ -1,3 +1,7 @@
+[WARNING]: Could not match supplied host pattern, ignoring: dell
+ansible-pull -i dell -o -U https://github.com/Vanderbull/ansible.git
+
+
 https://docs.ansible.com/ansible/latest/collections/community/general/discord_module.html
 # install git
 sudo apt install git
