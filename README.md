@@ -1,3 +1,30 @@
+
+
+steps straight from minimal debian, you can edit it as you like especially on the gnome part
+after debian minimal installation as root
+
+apt install sudo nala
+add youruser to sudo as root
+
+adduser yourusername sudo
+choose fastest mirror for nala
+
+sudo nala fetch
+install base gnome with nala
+
+sudo nala install gdm3 gnome-shell gnome-terminal gnome-text-editor
+install file manager, firefox etc
+
+sudo nala install firefox-esr nautilus nautilus-extension-gnome-terminal ffmpegthumbnailer dconf-editor
+enable gui login
+
+sudo systemctl enable gdm && sudo systemctl set-default graphical.target
+reboot and login
+
+sudo reboot
+
+
+
 [WARNING]: Could not match supplied host pattern, ignoring: dell
 
 ansible-pull -i dell -o -U https://github.com/Vanderbull/ansible.git
