@@ -66,6 +66,11 @@
       name: rhythmbox
       update_cache: yes
       state: absent
+  - name: Update apt cache and make sure gnome music is uninstalled
+    apt:
+      name: gnome-music
+      update_cache: yes
+      state: absent
     
   
 #  - name: copy wallpaper file
