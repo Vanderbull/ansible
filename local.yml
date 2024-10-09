@@ -61,7 +61,7 @@
     ansible.builtin.package:
       name: "gnome-games"
       state: absent
-  - name: Update apt cache and make sure Vim is uninstalled
+  - name: Update apt cache and make sure rhythmbox is uninstalled
     apt:
       name: rhythmbox
       update_cache: yes
