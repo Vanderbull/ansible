@@ -4,6 +4,22 @@
   become: true
 
   tasks:
+  # Update and install the base software
+  - name: Update apt package cache.
+    apt:
+      update_cache: yes
+      cache_valid_time: 600
+  - name: Upgrade installed apt packages.
+    apt:
+      pgrade: dist
+    register: upgrade
+  - name: Remove old packages from the cache.
+    apt:
+      autoclean: yes
+  - name: Remove dependencies that are no longer needed.
+    apt:
+      autoremove: yes
+      purge: yes
   - name: Read-write git checkout from github
     ansible.builtin.git:
       repo: https://github.com/bjonke/ansible.git
