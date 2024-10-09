@@ -12,7 +12,6 @@
   - name: Upgrade installed apt packages.
     apt:
       upgrade: dist
-      register: upgrade
   - name: Remove old packages from the cache.
     apt:
       autoclean: yes
