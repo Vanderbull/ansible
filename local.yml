@@ -5,9 +5,9 @@
 
   tasks:
   - name: Read-write git checkout from github
-  ansible.builtin.git:
-    repo: https://github.com/bjonke/ansible.git
-    dest: /home/rickard/ansible
+    ansible.builtin.git:
+      repo: https://github.com/bjonke/ansible.git
+      dest: /home/rickard/ansible
   - name: remove cached deb files
     debug:
       msg: cd /var/cache/apt/archives
