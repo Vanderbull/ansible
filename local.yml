@@ -1,5 +1,7 @@
 ---
 - hosts: localhost
+  vars:
+    fav_color: green
   connection: local
   become: true
 
