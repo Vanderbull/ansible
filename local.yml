@@ -10,10 +10,10 @@
     path: /var/log
     dest: /tmp/logs.tgz
     format: gz
-  - name: Copy archived logs to the remote servers  
-    copy:
-      src: /tmp/logs.tgz
-      dest: /var/log/logs.tgz
+  #- name: Copy archived logs to the remote servers  
+  #  copy:
+  #    src: /tmp/logs.tgz
+  #    dest: /var/log/logs.tgz
   # Update and install the base software
   - name: Update apt package cache.
     apt:
