@@ -4,6 +4,12 @@
   become: true
 
   tasks:
+  - name: Get disk usage on on control node
+    local_action: shell df -h /
+    register: disk_space
+  - name: Print control node disk space
+    debug:
+      msg: "Local disk space is {{ disk_space.stdout }}"
   - name: Archive the local log files
     local_action:
       module: community.general.archive
