@@ -10,7 +10,6 @@
     path: /var/log
     dest: /tmp/logs.tgz
     format: gz
-
   - name: Copy archived logs to the remote servers  
     copy:
       src: /tmp/logs.tgz
