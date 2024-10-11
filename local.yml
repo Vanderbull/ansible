@@ -6,6 +6,9 @@
   become: true
 
   tasks:
+  - name: Show me fav_color vakue
+    debug:
+      msg: My favorite color is {{ fav_color }}
   - name: Get disk usage on on control node
     local_action: shell df -h /
     register: disk_space
