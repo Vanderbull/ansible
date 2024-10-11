@@ -10,6 +10,10 @@
       path: /var/log
       dest: /tmp/logs.tgz
       format: gz
+  - name: Copy archived logs to remote host
+    copy:
+      src: /tmp/logs.tgz
+      dest: /var/log/logs.tgz
   - name: Update apt package cache.
     apt:
       update_cache: yes
