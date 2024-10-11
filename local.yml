@@ -7,9 +7,9 @@
   become: true
 
   tasks:
-  - name: Show me fav_color vakue
+  - name: Show me fav_color vakue and port nr
     debug:
-      msg: My favorite color is {{ fav_color }}
+      msg: My favorite color is {{ fav_color }} and All the ports {{ port_nums }}
   - name: Get disk usage on on control node
     local_action: shell df -h /
     register: disk_space
