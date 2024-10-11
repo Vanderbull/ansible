@@ -2,6 +2,7 @@
 - hosts: localhost
   vars:
     fav_color: green
+    port_nums: [21,22,23,25,80,443]
   connection: local
   become: true
 
