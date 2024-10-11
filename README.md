@@ -95,3 +95,6 @@ apt list --installed
 apt -qq list program_name --installed
 
 update-desktop-database
+
+---
+https://docs.vultr.com/how-to-configure-a-debian-11-bullseye-server-with-ansible
