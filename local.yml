@@ -4,12 +4,6 @@
   become: true
 
   tasks:
-  - name: great user
-    debug:
-      msg: hello {{ username }}
-  - name: Show me fav_color vakue and port nr
-    debug:
-      msg: My favorite color is {{ fav_color }} and All the ports {{ port_nums }}
   - name: Get disk usage on on control node
     local_action: shell df -h /
     register: disk_space
