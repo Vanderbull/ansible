@@ -2,7 +2,6 @@
 - hosts: localhost
   connection: local
   become: true
-
   vars:
     backup_source_directories:
       - /etc
@@ -10,7 +9,6 @@
       - /var/www
       - /usr/local/bin
     backup_destination: /tmp/backup/  # Change to your backup location, like an external drive
-
   tasks:
   - name: Ensure backup destination exists
     file:
