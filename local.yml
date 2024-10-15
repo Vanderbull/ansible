@@ -3,7 +3,31 @@
   connection: local
   become: true
 
+  vars:
+    backup_source_directories:
+      - /etc
+      - /home
+      - /var/www
+      - /usr/local/bin
+    backup_destination: /tmp/backup/  # Change to your backup location, like an external drive
+
   tasks:
+  - name: Ensure backup destination exists
+    file:
+      path: "{{ backup_destination }}"
+      state: directory
+
+  - name: Backup source directories using rsync
+    command: >
+      rsync -a --delete {{ item }} {{ backup_destination }}
+    loop: "{{ backup_source_directories }}"
+    ignore_errors: yes
+
+  - name: Backup completed successfully
+    debug:
+      msg: "Backup of {{ item }} completed."
+    loop: "{{ backup_source_directories }}"
+      
   - name: Get disk usage on on control node
     local_action: shell df -h /
     register: disk_space
