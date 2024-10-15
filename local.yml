@@ -22,8 +22,6 @@
     copy:
       src: /tmp/logs.tgz
       dest: /var/log/logs.tgz
-    async: 300
-    poll: 0
   - name: Update apt package cache.
     apt:
       update_cache: yes
