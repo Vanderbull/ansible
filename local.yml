@@ -16,8 +16,6 @@
       path: /var/log
       dest: /tmp/logs.tgz
       format: gz
-    async: 300
-    poll: 0
   - name: Copy archived logs to remote host
     copy:
       src: /tmp/logs.tgz
