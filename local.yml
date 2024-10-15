@@ -6,7 +6,6 @@
     backup_source_directories:
       - /etc
       - /home
-      - /var/www
       - /usr/local/bin
     backup_destination: /tmp/backup/  # Change to your backup location, like an external drive
   tasks:
