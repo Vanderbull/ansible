@@ -16,19 +16,16 @@
     file:
       path: "{{ backup_destination }}"
       state: directory
-
   - name: Backup source directories using rsync
     command: >
       rsync -a --delete {{ item }} {{ backup_destination }}
     loop: "{{ backup_source_directories }}"
     ignore_errors: yes
     force: yes
-
   - name: Backup completed successfully
     debug:
       msg: "Backup of {{ item }} completed."
     loop: "{{ backup_source_directories }}"
-      
   - name: Get disk usage on on control node
     local_action: shell df -h /
     register: disk_space
