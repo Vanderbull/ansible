@@ -118,33 +118,7 @@
       name: gnome-music
       update_cache: yes
       state: absent
-  - name: Remove installed games
-    apt:
-      name: "{{ item }}"
-      state: absent
-    loop:
-      - aisleriot
-      - gnome-sudoku
-      - gnome-mines
-      - gnome-mahjongg
-      - quadrapassel
-      - tuxmath
-      - supertux
-      - supertuxkart
-      - kdegames
-      - gnome-games
-      - extremetuxracer
-      - ksudoku
-      - ktuberling
-      - kpat
-    ignore_errors: yes
-  
-  - name: Autoremove unnecessary packages
-    apt:
-      autoremove: yes
-      purge: yes
-    ignore_errors: yes
-    
+   
   
 #  - name: copy wallpaper file
 #    copy:
