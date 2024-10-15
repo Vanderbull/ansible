@@ -111,6 +111,7 @@
         - htop
         - tmux
         - vim-nox
+        - rsync
   - name: uninstall htop
     ansible.builtin.package:
       name: "gnome-games"
